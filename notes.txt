@@ -1,0 +1,47 @@
+Prerequisites
+
+1. Install Node.js
+
+2. Install Yeoman npm install -g yo
+
+3. Install these NPM packages globally
+
+npm install -g bower gulp nodemon
+
+
+
+
+QuickStart
+
+1. Install generator-hottowel
+
+npm install -g generator-hottowel
+
+2. Create a new folder and change directory to it
+
+mkdir myapp
+cd myapp
+
+3. Run the generator
+
+yo hottowel helloWorld
+
+
+
+
+Running in dev mode
+
+Run the project with gulp serve-dev
+
+opens it in a browser and updates the browser with any files changes.
+
+
+
+
+Building the project
+
+
+When you generate the project it should run these commands, but if you notice missing packages, run these again:
+
+npm install
+bower install
