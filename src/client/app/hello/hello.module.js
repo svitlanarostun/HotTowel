@@ -5,7 +5,15 @@
     'use strict';
 
     angular.module('app.hello', [
-        'app.core'
-    ]);
+        'app.core',
+'ui.router',
+'ngAnimate'
+])
 
-})();
+
+
+;
+
+
+
+ })();
