@@ -1,3 +1,6 @@
+</html>
+
+
 <section class="mainbar">
     <section class="matter">
         <div class="container">
@@ -7,11 +10,56 @@
                     <div class="widget-content user">
                         <h3>Test</h3>
                     </div>
-
+<!--
                 <div class="row text-center">
                     <a data-ng-click="vm.orderLookup()" class="btn btn-default btn-lg">Lookup test </a>
                 </div>
+               <div ng-controller = "HelloController as hc">
+                  <form name="myForm" ng-submit="hc.register()">
+                  Name: <input type="text" ng-model="hc.user.name">
+             	  Email: <input type="email" ng-model="hc.user.email">
+             	  <input type="submit" value="Do It">
+        	  </form>
+                  <script src="hello.controller.js"></script>
+	       </div>
 
+<carousel interval="-1">
+  <slide active="activeState[0]">
+    <div>
+      Name: <input type="text" />
+    </div>
+  </slide>
+  <slide active="activeState[1]">
+    <div>
+      Password: <input type="password" />
+    </div>
+ <slide active="activeState[2]">
+    <div>
+      Text2: <input type="text" />
+    </div>
+  </slide>
+</carousel>
+<button class="btn btn-default" ng-click="nextSlide()">Next</button>
+-->
+
+    
+<!--
+<div>
+<a ui-sref-active="active" ui-sref=".form1"><span>1</span> F1</a>
+<a ui-sref-active="active" ui-sref=".form2"><span>2</span> F2</a>
+</div>
+-->
+
+<form id="signup-form" ng-submit="processForm()">
+
+            <!-- our nested state views will be injected here -->
+            <div id="form-view" ui-view>
+<a ui-sref-active-eq ui-sref="hello.form1" class="btn btn-block btn-info">
+    Start Form <span class="glyphicon glyphicon-circle-arrow-right"></span>
+    </a>
+
+</div>
+        </form>
 
             </div>
         </div>

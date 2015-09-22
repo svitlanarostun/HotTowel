@@ -6,13 +6,53 @@
 
     angular
         .module('app.hello')
-        .controller('HelloController', HelloController);
+        .controller('HelloController',  function($scope) {
+    
+    $scope.formData = {};
+    
+    $scope.processForm = function() {
+        alert('awesome!');
+    };
+    
+});
 
-    HelloController.$inject = ['$http'];
+
+//HelloController);
+
+/**    HelloController.$inject = ['$http', '$scope'];
     /* @ngInject */
-    function HelloController($http) {
-        var vm = this;
+/**    function HelloController($http, $scope) {
+   
+	var vm = this;
         vm.title = 'Hello';
+
+	this.user = {
+             name: '',
+             email: ''
+        };
+
+	this.register = function() {
+            console.log('User clicked register', this.user);
+	};
+
+    $scope.formData = {};
+    
+    $scope.processForm = function() {
+        alert('awesome!');  
+};   
+
+
+$scope.activeState = [true, false];
+
+$scope.nextSlide = function () {
+  var activeIndex = $scope.activeState.indexOf(true);
+  if (activeIndex >= $scope.activeState.length - 1) {
+    return; // already reached the last slide
+  }
+
+  $scope.activeState[activeIndex] = false;
+  $scope.activeState[activeIndex + 1] = true;
+};  
 
         vm.orderLookup = function () {
             var url;
@@ -28,5 +68,6 @@
                 });
         };
     }
+*/
 
 })();

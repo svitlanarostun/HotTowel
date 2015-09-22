@@ -6,11 +6,42 @@
 
     angular
         .module('app.hello')
-        .run(appRun);
+//        .run(appRun);
 
+.config(function($stateProvider, $urlRouterProvider) {
+     
+    $stateProvider
+    
+        .state('hello', {
+            url: '/hello',
+            templateUrl: 'app/hello/hello.html',
+          controller: 'HelloController',
+	  controllerAs: 'vm',
+                    title: 'Hello',
+                    settings: {
+                        nav: 2,
+                        content: 'Hello'
+                    }
+        })
+        
+        .state('hello.form1', {
+            url: '/form1',
+            templateUrl: 'app/hello/form-1.html'
+        })
+        
+        .state('hello.form2', {
+            url: '/form2',
+            templateUrl: 'app/hello/form-2.html'
+        });
+        
+    $urlRouterProvider.otherwise('/hello/form1');
+})
+
+
+/**
     appRun.$inject = ['routerHelper'];
-    /* @ngInject */
-    function appRun(routerHelper) {
+*    /* @ngInject */
+/**    function appRun(routerHelper) {
         routerHelper.configureStates(getStates());
     }
 
@@ -32,4 +63,8 @@
             }
         ];
     }
+*/
+
+
+
 })();
